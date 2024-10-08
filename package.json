@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "postinstall": "cat .env",
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
