@@ -1,5 +1,5 @@
 import webpush from "web-push";
-import prisma from "@/prisma/db";
+import prisma from "@hamampass/db";
 
 webpush.setVapidDetails(
   "mailto:ars.ikbal22@gmail.com",
@@ -22,14 +22,14 @@ const sendNotification = async ({
     },
   });
 
-  const subscriptions =
+  const subscription =
     admin?.subscriptions as unknown as webpush.PushSubscription[];
-  if (!subscriptions) return { error: "No subscription found" };
+  if (!subscription) return { error: "No subscription found" };
 
-  const payload = JSON.stringify({ desc, redirectUrl });
-
-  for (const subscription of subscriptions) {
-    webpush.sendNotification(subscription, payload);
+  // for of loop for subscription array
+  for (const item of subscription) {
+    const payload = JSON.stringify({ desc, redirectUrl });
+    webpush.sendNotification(item, payload);
   }
 
   return { message: "Notification sent" };

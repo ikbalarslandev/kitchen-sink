@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import prisma from "@/prisma/db";
+import prisma from "@hamampass/db";
 import { sendNotification } from "@/actions/push";
 import moment from "moment";
 import "moment/locale/tr";
@@ -41,7 +41,7 @@ const createBooking = async (req: NextRequest) => {
   await sendNotification({
     propertyId,
     desc,
-    redirectUrl: `/booking/${booking.id}`,
+    redirectUrl: `/tr/admin/${booking.id}`,
   });
 
   return booking;
