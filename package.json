@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "cat .env",
+    "postinstall": "node create.env.js && cat .env",
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
