@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node ../../create.env.js",
+    "prebuild": "node ../../create.env.js && cat .env",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
