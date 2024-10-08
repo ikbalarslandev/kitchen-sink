@@ -4,7 +4,7 @@
   "description": "the prisma client for hamampass project",
   "main": "client.ts",
   "scripts": {
-    "postinstall": "prisma generate"
+    "postinstall": "cat .env && prisma generate"
   },
   "keywords": [
     "prisma",
