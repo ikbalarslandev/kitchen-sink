@@ -5,7 +5,7 @@
   "main": "client.ts",
   "scripts": {
     "postinstall": "prisma generate",
-    "build": "cat .env"
+    "prebuild": "cat .env"
   },
   "keywords": [
     "prisma",
