@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "prebuild": "node create.env.js",
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
